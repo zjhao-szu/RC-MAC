@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.13">
+  <compound refid="classgr_1_1RC__MAC_1_1CTSSender" kind="class"><name>gr::RC_MAC::CTSSender</name>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender_1aee5ce6cf34fe5bd0bcbb8eeaca1c053b" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender_1a341f4cc704975e67199fe4e2904d5e4a" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1RC__MAC_1_1CTSSender__impl" kind="class"><name>gr::RC_MAC::CTSSender_impl</name>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1aa22205bf01d6a918250fddb7dfd37d25" kind="variable"><name>m_state</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1a2bfefdf66bdacf2be8c991b34384b9d6" kind="variable"><name>m_receive_data_port</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1a13d6197035b5c4106b432463564189a7" kind="variable"><name>m_receive_RTS_port</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1a73b0a7ce1aa7c526fc276b6c9a516a41" kind="variable"><name>m_out_data_port</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1a9472bbe8d4625b903bb9fddffaf560e8" kind="variable"><name>m_out_CTS_port</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1ab4bd4091bf4b1b1ef2270b5f3cc71d12" kind="variable"><name>m_sf</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1a06f9ae0c72fcab1cfa5e2740146c7347" kind="variable"><name>m_sampRate</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1a891cfe73e8bea668c3c52b836a578cd1" kind="variable"><name>m_bw</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1a541f75b3eca45771df668b61aeedd8e7" kind="variable"><name>m_isconnected</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1abed5a8e28f2c3d687472a9b71d50410c" kind="variable"><name>m_waitTime</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1a120ad0639fdfb50f3563127328a8de42" kind="variable"><name>m_NodeIdConnected</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1a22b0c5476bf0d1a5704ba79d9d8c4505" kind="variable"><name>m_durationConnected</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1a7fd13d34a3da60f82f545dba998eea3f" kind="variable"><name>m_classType</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1a793ebf73bf99ce68ba67df06d354f002" kind="variable"><name>m_slotIntervalTime</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1ad8d8312851a731ccc1c27df9f291f604" kind="variable"><name>m_start</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1ac32f29208deca8bc5b1acc248e115209" kind="variable"><name>beaconMsg</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1a2745ea76caa78ca2a6449bef301a8fa7" kind="variable"><name>m_beaconIntervalTime</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1a5bbcbc43f63bcc7696bf61eacefba2ef" kind="variable"><name>m_nodeIdDurations</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1acab6e6e2d595be3c440679fb3c9a394f" kind="function"><name>receiveDataSolve</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1a796ae7847db0ecf9f2e4517d41263e39" kind="function"><name>receiveRTSSolve</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1aff064d2bf15c961462a7ba02a453f9cf" kind="function"><name>CTSSender_impl</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1a122b02320b35b8455255a05080f094e1" kind="function"><name>~CTSSender_impl</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1a2ff3ba0deb58d8f864929578cf7436c6" kind="function"><name>forecast</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1CTSSender__impl_1a2a54e320f87356b840fcc48edf0373bc" kind="function"><name>general_work</name></member>
+  </compound>
+  <compound refid="classgr_1_1RC__MAC_1_1ReceiveToken" kind="class"><name>gr::RC_MAC::ReceiveToken</name>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken_1ae647105676fe420d4bf5154ea940220c" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken_1a0b2aab77624a4cee965009fa8a15736b" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl" kind="class"><name>gr::RC_MAC::ReceiveToken_impl</name>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ab4b1ac921bdcd1f8ba3b37a0048e64f7" kind="variable"><name>m_sf</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a7e3e691fb88f4b27698767ed30a8bcef" kind="variable"><name>m_samp_rate</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a748ee26271b98c473b924660ace07730" kind="variable"><name>m_bw</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1aac32e7468003e81c9c5a8923b74465ce" kind="variable"><name>m_number_of_bins</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a01a386119d9c177f4f34f04d0f8c6fd7" kind="variable"><name>m_fft_size</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ae34bc0831a7d9288a38eb98fb53d880c" kind="variable"><name>m_samples_per_symbol</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ad8e68c265f5b965e23207c2406c6aeeb" kind="variable"><name>m_sync_words</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1af3cb1cc2c50ac70c8776ab95d467213f" kind="variable"><name>m_oversample_rate</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a01be92d380775ac8fbf7a7587302ac46" kind="variable"><name>m_up</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ab1c8b6ba333e44a084faa8a75f089b37" kind="variable"><name>premab_symb_cnt</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a8d64dada23df0825aecbb685ae049f29" kind="variable"><name>m_upchirp</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a4dec3851d23b9fac4b3f1b8c8168998d" kind="variable"><name>m_downchirp</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a6d6e2c8c69cfa3d563ef0c1252eb5c7b" kind="variable"><name>m_dechirped</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a1dfa6bdbc5660b97351eba46f97747bd" kind="variable"><name>m_fftVector</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a027844611bb29f763a8c5cb2f2b7ce4e" kind="variable"><name>m_upchirp_ifreq</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a6c46946413481e88475656f199873a07" kind="variable"><name>m_downchirp_ifreq</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a163c7a79f447b52edb072a497c4cbf99" kind="variable"><name>m_result</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a46c1100e4e82e7ca77b619b4f35ce15e" kind="variable"><name>m_outPort</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1af6bcd73048302eecf5982a4eae08c0b8" kind="variable"><name>m_state</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ac27387d29727a5b4ccccb05c81224ef9" kind="variable"><name>m_fft</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a3b1d1b93a76b5123462e92868ea80ba6" kind="variable"><name>m_window</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a7e89f4836396220922e5adc264534074" kind="variable"><name>m_beta</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a2c7b01ef7eef99ea038889c895678cac" kind="variable"><name>m_corr_fails</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a3957bd3e7c670c151eb41221e3b5432d" kind="function"><name>search_fft_peak</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a198fa182568dee4e38a3cafab460d794" kind="function"><name>argmax_32f</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1afbcd203005cee5a91773a31ecd3e33b6" kind="function"><name>instantaneous_frequency</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a4da850d90d5db0c5962e8dd2360310cb" kind="function"><name>instantaneous_phase</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1abaa728332d8d68fc05a0ac650005d7c5" kind="function"><name>cross_correlate_ifreq_fast</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ac58b4e750ef206a64346d57cacda3a81" kind="function"><name>cross_correlate_fast</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a019c7a605aae66e9f880a85ef31cf90d" kind="function"><name>cross_correlate</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a6597f31955bcaa12cc1648ef62851c6c" kind="function"><name>cross_correlate_ifreq</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1abce56464c34d04fd9e35c4a36293f12c" kind="function"><name>detect_upchirp</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a84c17e60efe6d49391814daba5ede641" kind="function"><name>detect_downchirp</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a85849cd552476818523b63fc5be9556b" kind="function"><name>detect_preamble_autocorr</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1aeb39205dc7d2649d18a7960e978db512" kind="function"><name>sliding_norm_cross_correlate_upchirp</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a42620761f598555bf253b4888deebb96" kind="function"><name>stddev</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a8291251d4e7d9f7bc1bb424a6c0a0245" kind="function"><name>ReceiveToken_impl</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ae103ff042066eab4d8a4e2fd354e1346" kind="function"><name>~ReceiveToken_impl</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1aee4d1c62675c257d2adf58de6724fbfb" kind="function"><name>forecast</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a7af14a79c07291da0af035eb486654f9" kind="function"><name>general_work</name></member>
+  </compound>
+  <compound refid="classgr_1_1RC__MAC_1_1RTSSender" kind="class"><name>gr::RC_MAC::RTSSender</name>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender_1a31185e1988264d34c2209e30d93e7a5b" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender_1ac6114590f29097774fb049d0809f8539" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1RC__MAC_1_1RTSSender__impl" kind="class"><name>gr::RC_MAC::RTSSender_impl</name>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1ab01409bdfe00edee460a218ff114395e" kind="variable"><name>m_state</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1af49920c4c6b881ab48cbebd9bdd67285" kind="variable"><name>m_receive_userdata_port</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a3aee8cf92907a02eedd7e466f6d1ff82" kind="variable"><name>m_out_userdata</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1ad6032247439c9d76e82f5ca93099c1ae" kind="variable"><name>m_out_RTS</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1ae1d000cb1b65cb5e6ebb21eb4dedf755" kind="variable"><name>m_receiveLoRaDecodeMessage</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1ac069f9bc503526ac0070e009f60c4dc0" kind="variable"><name>m_receiveCTSMessage</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a2e8e306e8dc962d4dd31035f0314dec7" kind="variable"><name>m_userDatas</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a53a2422e18cc1b727b491c7ff730d4e6" kind="variable"><name>m_sf</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1aa26e90aebc7b4e7d79a37de0a8a7e71b" kind="variable"><name>m_sampRate</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a56b02f3158dd0a363b62af4c3f34483e" kind="variable"><name>m_bw</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1ab319f433f9d28780f1bb08486a262d13" kind="variable"><name>m_oversample_rate</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1ac88d3794888b94d0dd02887dff7ea4cd" kind="variable"><name>m_number_of_bins</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1aeb885280b7dd34c2514ffb90ac61b4f2" kind="variable"><name>m_samp_pre_symbol</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a820444d6ffdb15722e58141bde82a8f2" kind="variable"><name>m_fft_size</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a76367f4f3b0e9120508cacbeceaa0e52" kind="variable"><name>m_upchirp</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a7de643ce6abbe486a31ede9e79303efd" kind="variable"><name>m_downchirp</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a25867f3a85ef58fc736ffd288b0ebd09" kind="variable"><name>m_classType</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a1c1f493d087c98d35699e82a9843bf35" kind="variable"><name>m_nodeId</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a6f5bb3558a12fd951980c8c184aba059" kind="variable"><name>m_duration</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a0d9551b81aa4842570974bf57adf9fc7" kind="variable"><name>m_ReceiveNodeId</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1ab65ae2b2e6b26443b8c2b0a472f6072c" kind="variable"><name>m_ReceiveDuration</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1af786583a1c9713108609318a54f69c62" kind="variable"><name>m_SleepWindowCount</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a8debad64506e7d00884a9675340ca6a4" kind="variable"><name>m_preamble_drift_max</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a4b91fe385cf4b709e9053cf9dca5ae78" kind="variable"><name>m_fft</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a4b1cd546a8d60d347f38c0b258b769dd" kind="variable"><name>m_argmaxHistory</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a9010bc546f1d39d5045718cde8cb16f0" kind="variable"><name>m_samples_per_symbol</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1af1fbecbf0ac27133d2fdbc35da2b5277" kind="variable"><name>m_cad_count</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1aa85fc18b4307c74368cfa7eea655ead0" kind="variable"><name>m_cad_detect</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a1a997b5f5fb7482cdea5aa89dd9ce131" kind="variable"><name>m_before_receive1_ms</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a4961bbb11ade77950714cd430da3bea1" kind="variable"><name>m_before_receive2_ms</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1ae22f8eccc8d053c6df4b021709485fe3" kind="variable"><name>m_receive1_window_count</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a726b95ad12d41039f9a5cae48ecf8e04" kind="variable"><name>m_receive2_window_count</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1affc6bbc78cf483aa30f2f55401249425" kind="variable"><name>m_firstSendBeacon</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1aff142d2ef2c7110917158c418248939d" kind="variable"><name>m_slotReceive_window_count</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a4015d59fb61174a8d6b47be8cdd1aab9" kind="variable"><name>m_beacon_Interval_Window</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a823b83ac7c0ba79cd71ee65abb260765" kind="variable"><name>m_SendTotalData</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a9968cf50e7027a679397d43d777e1cff" kind="variable"><name>m_CTSToken</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a11b2683a449be33f7f10b6a3c121bc67" kind="variable"><name>m_outParaPort</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a0b6e5f5b0560f576a8b918c0a0f30a7b" kind="variable"><name>m_paraState</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a761b191e97dfa673bd3e4165953f4200" kind="variable"><name>m_endTime</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1ab538b46c0dc7f4a550d9a7026ceccc49" kind="variable"><name>m_totalTime</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a686c2cc096b1675d723e5e0e1cf6ccd9" kind="variable"><name>m_endDIFSTime</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a94cbd98460f2951287fdb3df95feb6bd" kind="variable"><name>m_DIFSTime</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a7fca611a804c2f3980e6cda0690d1e01" kind="variable"><name>m_endReceiveTime</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1af42fa5cae3f2004b8ba84df33f87b2c0" kind="variable"><name>m_receiveTime</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1ab782288c6120c4769a63b71961a8c381" kind="function"><name>receiveUserData</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a14d245dccdf809cc9c8311b5deb4eb5a" kind="function"><name>detectCad</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1acc8da698bbceb4e3dc3c3014513f3d75" kind="function"><name>pmod</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a587960d35c4dbcf830f2368e8f911ea7" kind="function"><name>argmax</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1af0d094699f88c1ef39792cbe87dc4664" kind="function"><name>searchFFTPeek</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1ae0c192403c9d7e23a01fbe5c5aa829c8" kind="function"><name>CADDetect_MinBin</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1ae33b98a1b54c5877adbaa21a8ff5a497" kind="function"><name>receiveDecodeMessage</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a4dc5555ccde7390ae36a1ef2cf3fafe4" kind="function"><name>receiveCTSMsg</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a6f4322955e78dea3f18355c5f0320c72" kind="function"><name>sendRTSByPacket</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a1a515aa250b43182d639cb24672028b6" kind="function"><name>sendRTSBySerialization</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a7791214d4185cc6e1e5eb4e26a36cb53" kind="function"><name>sendData</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a8242feab4277055acaf12721d12a67fe" kind="function"><name>sendTotalData</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a5c88a51777c18c843e8ce0a405c36e73" kind="function"><name>messageDebugPrint</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1addc5a9a99504baad47470fdf13f60e29" kind="function"><name>getTimeval</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a143d66802d2966f1fbcbf96f15551f0b" kind="function"><name>sendParaMsg</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1af537647a59d3b79d842ca08fc9e70d9d" kind="function"><name>RTSSender_impl</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1ac70b68a360714a57f7f7a0ab5285f8a9" kind="function"><name>~RTSSender_impl</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1a399e30b706a9d34c8e6cb51e5b760931" kind="function"><name>forecast</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSender__impl_1ac80b23da116844f44ee898d8104de1ea" kind="function"><name>general_work</name></member>
+  </compound>
+  <compound refid="classgr_1_1RC__MAC_1_1RTSSendToken" kind="class"><name>gr::RC_MAC::RTSSendToken</name>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken_1a2571094d42fd92bfc06e69bd6f7f7225" kind="typedef"><name>sptr</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken_1a246ffe6d6e5cb853bb797c33a52544b4" kind="function"><name>make</name></member>
+  </compound>
+  <compound refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl" kind="class"><name>gr::RC_MAC::RTSSendToken_impl</name>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1ad436cdf1c624d03caa3facb2f4b09cc1" kind="variable"><name>m_sf</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1a3040d1d610e1310ff7951e076b8204a5" kind="variable"><name>m_samp_rate</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1af784a1408de8f0deb9f248cc72fe1cf3" kind="variable"><name>m_bw</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1ad917bd57e370ec6382081606c4f8161a" kind="variable"><name>m_number_of_bins</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1ad304088c90d303174fd46c6285f9a825" kind="variable"><name>m_samples_per_symbol</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1a15ce20bf7c0feac24803e9e9f9d43032" kind="variable"><name>m_nodeToken</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1af2c4fad9f4b3a8a20cb4f4f46b0cc5c4" kind="variable"><name>m_oversample_rate</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1a753c290a2cd07bf3ecbe9546bf6f13d9" kind="variable"><name>m_inter_frame_padding</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1a68f4e39794e0afa035889b301070199b" kind="variable"><name>m_frame_len</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1a0d17f4b65642d96ddb60b565e9690f7d" kind="variable"><name>m_upchirp</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1ae6940f336640f6f3df30c81ae84ebe86" kind="variable"><name>m_downchirp</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1a3482dbfb4bb57b11c74f9fd7451098cf" kind="variable"><name>m_up</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1ae381c21bfad2efde74bdce2ab467c73c" kind="variable"><name>symb_cnt</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1a51946e7fa44c19694bb8a45a627ee412" kind="variable"><name>preamb_symb_cnt</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1a2837e4d0d2e30ed775a4e0a4f473504b" kind="variable"><name>m_receiveRTSTokenPort</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1aa76abbc8c060fe21aff1b469526f8070" kind="variable"><name>m_state</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1a3729b52634899f31f40cb8293b765744" kind="variable"><name>m_outParaPort</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1a1f80afeb8a9fbd0e740c135aef8218a5" kind="variable"><name>m_endRTSTime</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1a1f39352c4f5fdeccbbaec036292ef4b6" kind="variable"><name>m_RTSTime</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1a0d6cbcd7c351cc714d6b3ce0f3e77c50" kind="function"><name>receiveRTSToken</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1a482fd113d7f2ce3bda3f5571e503e83c" kind="function"><name>getTimeval</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1ae472345ad135629cf2cf61696aab27a7" kind="function"><name>RTSSendToken_impl</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1a3eff60e93ab5738917b6173d960a82db" kind="function"><name>~RTSSendToken_impl</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1acaf93ca8f408601e2bcf7009ace91749" kind="function"><name>forecast</name></member>
+    <member refid="classgr_1_1RC__MAC_1_1RTSSendToken__impl_1a9bd9f0e87c1f8e5e11f6dabbe404f1fd" kind="function"><name>general_work</name></member>
+  </compound>
+  <compound refid="namespacegr" kind="namespace"><name>gr</name>
+  </compound>
+  <compound refid="namespacegr_1_1RC__MAC" kind="namespace"><name>gr::RC_MAC</name>
+    <member refid="namespacegr_1_1RC__MAC_1a432e94fb38ed3dd4a82729067253d476" kind="enum"><name>CTS_Class_Type</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a432e94fb38ed3dd4a82729067253d476a7b4cc78effc5094b890cb5c3453a8c2d" kind="enumvalue"><name>CTS_ClassA</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a432e94fb38ed3dd4a82729067253d476a3c163e97d586e811cae0db8ce71057d3" kind="enumvalue"><name>CTS_ClassB</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a432e94fb38ed3dd4a82729067253d476a9693a2c64902475a3bf4019492b3a44f" kind="enumvalue"><name>CTS_ClassC</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44b" kind="enum"><name>CTS_Sender_State</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44ba4805e18cde570b1086505fb5d4ffb66e" kind="enumvalue"><name>S_CTS_Reset</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44bad5addf39c230e30dfcb37474c75120ce" kind="enumvalue"><name>S_CTS_Receive</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44ba47cf9c94d28bc2b2364aeab977648a1f" kind="enumvalue"><name>S_CTS_Send_Data</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44ba07cceaa862721335180c0343b770c0ce" kind="enumvalue"><name>S_CTS_Send_CTS_ClassA</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44ba37d0cdd02aa817fdc002f7074b07e0f6" kind="enumvalue"><name>S_CTS_Send_CTS_ClassB</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44bad5dc8c92236ff7131b640a10ec84c77c" kind="enumvalue"><name>S_CTS_Send_CTS_ClassC</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44bab2e9c752ff10f5789e6036e2647aba5a" kind="enumvalue"><name>S_CTS_Beacon</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a7c1ccd900ff81ccbc137ae9babbdae61" kind="enum"><name>RECEIVE_TOKEN</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a7c1ccd900ff81ccbc137ae9babbdae61a2ab5e56a9d496351322706513a568a18" kind="enumvalue"><name>STATE_TOKEN_DETECT_PREMBLE</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a7c1ccd900ff81ccbc137ae9babbdae61a85c2ef0d5342077cf8d3ae15b88b4e46" kind="enumvalue"><name>STATE_TOKEN_SYNC</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a7c1ccd900ff81ccbc137ae9babbdae61a27915379ed4c49e44767422e89ce5fe3" kind="enumvalue"><name>STATE_TOKEN_FIND_SFD</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a7c1ccd900ff81ccbc137ae9babbdae61a91dbb1ba6149e700afbff4035fe944e7" kind="enumvalue"><name>STATE_TOKEN_PAUSE</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a7c1ccd900ff81ccbc137ae9babbdae61aa31e1a7a7df44a85549ce8dfd0772558" kind="enumvalue"><name>STATE_TOKEN_READ_TOKEN</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667" kind="enum"><name>RTS_Sender_State</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a9cae153efe99dc9cec1207204f2f8202" kind="enumvalue"><name>S_RTS_RESET</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a4f429edd04d80c6fe3d93141493c5e01" kind="enumvalue"><name>S_RTS_RECEIVE_DATA</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a60ca97d74333db48bddeafebf1ee0f42" kind="enumvalue"><name>S_RTS_CAD</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a731e955ff07dd83f8bbd89cacf5925f3" kind="enumvalue"><name>S_RTS_WAIT_DATA</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667ab2989e49bdc58a92f6c5bdaf0d9dd8b1" kind="enumvalue"><name>S_RTS_WAIT_CTS</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667ae753b2566e2461ea8a14acb951a5d3c6" kind="enumvalue"><name>S_RTS_send_RTS</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a6265e41f9b89ab7ab6573290501df3ab" kind="enumvalue"><name>S_RTS_SLEEP</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a197987100fb88bc03ac0cb1aac7796d0" kind="enumvalue"><name>S_RTS_TO_RECEIVE1</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a174ccc7f24bd6b91fecb3c4c885b14b2" kind="enumvalue"><name>S_RTS_RECEIVE1</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667ab6f7d6c87d9445496687a54fb155e050" kind="enumvalue"><name>S_RTS_TO_RECEIVE2</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a14545560c468600c174a54008233a552" kind="enumvalue"><name>S_RTS_RECEIVE2</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a06c60466ddca9a9756a3061e19f34356" kind="enumvalue"><name>S_RTS_Send_Data</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a1bf9d2704c648bb1231d0ab2aaa73e88" kind="enumvalue"><name>S_RTS_RECEIVE_Slot</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667ac615e5fa843cda5427a5cc0d810225c0" kind="enumvalue"><name>S_RTS_RECEIVE_Class_C</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667aaf0ed68eb06ac6120f9c9563a18a2b89" kind="enumvalue"><name>S_RTS_BEACON</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a0389363cde11a096a20bc3d8088b3f95" kind="enum"><name>RTS_Class_Type</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a0389363cde11a096a20bc3d8088b3f95a7f3c105324acc44094da42be4378dabc" kind="enumvalue"><name>M_RTS_CLASSA</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a0389363cde11a096a20bc3d8088b3f95addd678861eca905895f06017b3ba41fa" kind="enumvalue"><name>M_RTS_CLASSB</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a0389363cde11a096a20bc3d8088b3f95a183163f1cf77661bfaa8530ca7cfc549" kind="enumvalue"><name>M_RTS_CLASSC</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1aa519a6710824b310fdf1bef27304ede9" kind="enum"><name>STATE_RTS_TOKEN</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1aa519a6710824b310fdf1bef27304ede9afaee01830fe9e46a416d21cc6060b329" kind="enumvalue"><name>STATE_RTS_RESET</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1aa519a6710824b310fdf1bef27304ede9a75ef211afc9c4c09079c1925840d04e3" kind="enumvalue"><name>STATE_RTS_SEND_TOKEN</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a2941d94bbf8d3ffc4406df48780e3712" kind="function"><name>build_ref_upchirps</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1ab216dd2b74a2b9623165134502c7ac62" kind="function"><name>build_chirps</name></member>
+    <member refid="namespacegr_1_1RC__MAC_1a79c6a970cb81bcaec75aa90fedbd35f7" kind="function"><name>build_downchirp</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="api_8h" kind="file"><name>api.h</name>
+    <member refid="api_8h_1a691d0d7f6a7afa9870ebf536db36e161" kind="define"><name>RC_MAC_API</name></member>
+  </compound>
+  <compound refid="CTSSender_8h" kind="file"><name>CTSSender.h</name>
+  </compound>
+  <compound refid="CTSSender__impl_8h" kind="file"><name>CTSSender_impl.h</name>
+  </compound>
+  <compound refid="group__defs_8dox" kind="file"><name>group_defs.dox</name>
+  </compound>
+  <compound refid="main__page_8dox" kind="file"><name>main_page.dox</name>
+  </compound>
+  <compound refid="ReceiveToken_8h" kind="file"><name>ReceiveToken.h</name>
+  </compound>
+  <compound refid="ReceiveToken__impl_8h" kind="file"><name>ReceiveToken_impl.h</name>
+  </compound>
+  <compound refid="RTSSender_8h" kind="file"><name>RTSSender.h</name>
+  </compound>
+  <compound refid="RTSSender__impl_8h" kind="file"><name>RTSSender_impl.h</name>
+  </compound>
+  <compound refid="RTSSendToken_8h" kind="file"><name>RTSSendToken.h</name>
+  </compound>
+  <compound refid="RTSSendToken__impl_8h" kind="file"><name>RTSSendToken_impl.h</name>
+  </compound>
+  <compound refid="utilities_8h" kind="file"><name>utilities.h</name>
+  </compound>
+  <compound refid="group__block" kind="group"><name>block</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>include</name>
+  </compound>
+  <compound refid="dir_97aefd0d527b934f1d99a682da8fe6a9" kind="dir"><name>lib</name>
+  </compound>
+  <compound refid="dir_d0facb6ccd8207c7e8a4543017c2c5f0" kind="dir"><name>RC_MAC</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

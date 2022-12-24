@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="CTSSender_8h" kind="file" language="C++">
+    <compoundname>CTSSender.h</compoundname>
+    <includes refid="api_8h" local="no">RC_MAC/api.h</includes>
+    <includes local="no">gnuradio/block.h</includes>
+    <incdepgraph>
+      <node id="9">
+        <label>gnuradio/attributes.h</label>
+      </node>
+      <node id="10">
+        <label>gnuradio/block.h</label>
+      </node>
+      <node id="8">
+        <label>RC_MAC/api.h</label>
+        <link refid="api_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>CTSSender.h</label>
+        <link refid="CTSSender_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classgr_1_1RC__MAC_1_1CTSSender" prot="public">gr::RC_MAC::CTSSender</innerclass>
+    <innernamespace refid="namespacegr">gr</innernamespace>
+    <innernamespace refid="namespacegr_1_1RC__MAC">gr::RC_MAC</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*<sp/>-*-<sp/>c++<sp/>-*-<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/>Copyright<sp/>2022<sp/>zjhao.</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/>This<sp/>is<sp/>free<sp/>software;<sp/>you<sp/>can<sp/>redistribute<sp/>it<sp/>and/or<sp/>modify</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/>it<sp/>under<sp/>the<sp/>terms<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>as<sp/>published<sp/>by</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation;<sp/>either<sp/>version<sp/>3,<sp/>or<sp/>(at<sp/>your<sp/>option)</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/>any<sp/>later<sp/>version.</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="10"><highlight class="comment"><sp/>*<sp/>This<sp/>software<sp/>is<sp/>distributed<sp/>in<sp/>the<sp/>hope<sp/>that<sp/>it<sp/>will<sp/>be<sp/>useful,</highlight></codeline>
+<codeline lineno="11"><highlight class="comment"><sp/>*<sp/>but<sp/>WITHOUT<sp/>ANY<sp/>WARRANTY;<sp/>without<sp/>even<sp/>the<sp/>implied<sp/>warranty<sp/>of</highlight></codeline>
+<codeline lineno="12"><highlight class="comment"><sp/>*<sp/>MERCHANTABILITY<sp/>or<sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE.<sp/><sp/>See<sp/>the</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/>*<sp/>GNU<sp/>General<sp/>Public<sp/>License<sp/>for<sp/>more<sp/>details.</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="15"><highlight class="comment"><sp/>*<sp/>You<sp/>should<sp/>have<sp/>received<sp/>a<sp/>copy<sp/>of<sp/>the<sp/>GNU<sp/>General<sp/>Public<sp/>License</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"><sp/>*<sp/>along<sp/>with<sp/>this<sp/>software;<sp/>see<sp/>the<sp/>file<sp/>COPYING.<sp/><sp/>If<sp/>not,<sp/>write<sp/>to</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/>*<sp/>the<sp/>Free<sp/>Software<sp/>Foundation,<sp/>Inc.,<sp/>51<sp/>Franklin<sp/>Street,</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/>*<sp/>Boston,<sp/>MA<sp/>02110-1301,<sp/>USA.</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>INCLUDED_RC_MAC_CTSSENDER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>INCLUDED_RC_MAC_CTSSENDER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="api_8h" kindref="compound">RC_MAC/api.h</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;gnuradio/block.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="namespacegr" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacegr" kindref="compound">gr</ref><sp/>{</highlight></codeline>
+<codeline lineno="28" refid="namespacegr_1_1RC__MAC" refkind="compound"><highlight class="normal"><sp/><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">RC_MAC<sp/>{</highlight></codeline>
+<codeline lineno="29" refid="namespacegr_1_1RC__MAC_1a432e94fb38ed3dd4a82729067253d476" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespacegr_1_1RC__MAC_1a432e94fb38ed3dd4a82729067253d476" kindref="member">CTS_Class_Type</ref>{</highlight></codeline>
+<codeline lineno="30" refid="namespacegr_1_1RC__MAC_1a432e94fb38ed3dd4a82729067253d476a7b4cc78effc5094b890cb5c3453a8c2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegr_1_1RC__MAC_1a432e94fb38ed3dd4a82729067253d476a7b4cc78effc5094b890cb5c3453a8c2d" kindref="member">CTS_ClassA</ref>,</highlight></codeline>
+<codeline lineno="31" refid="namespacegr_1_1RC__MAC_1a432e94fb38ed3dd4a82729067253d476a3c163e97d586e811cae0db8ce71057d3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegr_1_1RC__MAC_1a432e94fb38ed3dd4a82729067253d476a3c163e97d586e811cae0db8ce71057d3" kindref="member">CTS_ClassB</ref>,</highlight></codeline>
+<codeline lineno="32" refid="namespacegr_1_1RC__MAC_1a432e94fb38ed3dd4a82729067253d476a9693a2c64902475a3bf4019492b3a44f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegr_1_1RC__MAC_1a432e94fb38ed3dd4a82729067253d476a9693a2c64902475a3bf4019492b3a44f" kindref="member">CTS_ClassC</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="34" refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44b" kindref="member">CTS_Sender_State</ref>{</highlight></codeline>
+<codeline lineno="35" refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44ba4805e18cde570b1086505fb5d4ffb66e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44ba4805e18cde570b1086505fb5d4ffb66e" kindref="member">S_CTS_Reset</ref>,</highlight></codeline>
+<codeline lineno="36" refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44bad5addf39c230e30dfcb37474c75120ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44bad5addf39c230e30dfcb37474c75120ce" kindref="member">S_CTS_Receive</ref>,</highlight></codeline>
+<codeline lineno="37" refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44ba47cf9c94d28bc2b2364aeab977648a1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44ba47cf9c94d28bc2b2364aeab977648a1f" kindref="member">S_CTS_Send_Data</ref>,</highlight></codeline>
+<codeline lineno="38" refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44ba07cceaa862721335180c0343b770c0ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44ba07cceaa862721335180c0343b770c0ce" kindref="member">S_CTS_Send_CTS_ClassA</ref>,</highlight></codeline>
+<codeline lineno="39" refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44ba37d0cdd02aa817fdc002f7074b07e0f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44ba37d0cdd02aa817fdc002f7074b07e0f6" kindref="member">S_CTS_Send_CTS_ClassB</ref>,</highlight></codeline>
+<codeline lineno="40" refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44bad5dc8c92236ff7131b640a10ec84c77c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44bad5dc8c92236ff7131b640a10ec84c77c" kindref="member">S_CTS_Send_CTS_ClassC</ref>,</highlight></codeline>
+<codeline lineno="41" refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44bab2e9c752ff10f5789e6036e2647aba5a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44bab2e9c752ff10f5789e6036e2647aba5a" kindref="member">S_CTS_Beacon</ref></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="48" refid="classgr_1_1RC__MAC_1_1CTSSender" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="api_8h_1a691d0d7f6a7afa9870ebf536db36e161" kindref="member">RC_MAC_API</ref><sp/><ref refid="classgr_1_1RC__MAC_1_1CTSSender" kindref="compound">CTSSender</ref><sp/>:<sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>gr::block</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51" refid="classgr_1_1RC__MAC_1_1CTSSender_1aee5ce6cf34fe5bd0bcbb8eeaca1c053b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>boost::shared_ptr&lt;CTSSender&gt;<sp/><ref refid="classgr_1_1RC__MAC_1_1CTSSender_1aee5ce6cf34fe5bd0bcbb8eeaca1c053b" kindref="member">sptr</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>sptr<sp/>make(uint8_t<sp/>sf,uint32_t<sp/>bw,uint32_t<sp/>sampRate,</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>classType);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>RC_MAC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>gr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>INCLUDED_RC_MAC_CTSSENDER_H<sp/>*/</highlight><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/zjhao/gr-RC_MAC/include/RC_MAC/CTSSender.h"/>
+  </compounddef>
+</doxygen>

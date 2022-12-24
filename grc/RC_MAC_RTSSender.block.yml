@@ -1,0 +1,46 @@
+id: RC_MAC_RTSSender
+label: RTSSender
+category: '[Rc_mac]'
+templates:
+  imports: import RC_MAC
+  make: RC_MAC.RTSSender(${sf}, ${bw}, ${classType}, ${NodeId}, ${sampRate})
+parameters:
+- id: sf
+  label: Sf
+  dtype: raw
+- id: bw
+  label: Bw
+  dtype: raw
+- id: classType
+  label: Classtype
+  dtype: int
+- id: NodeId
+  label: Nodeid
+  dtype: raw
+- id: sampRate
+  label: Samprate
+  dtype: raw
+inputs:
+- label: in
+  domain: stream
+  dtype: complex
+- domain: message
+  id: UserDataIn
+  optional: true
+- domain: message
+  id: DecodeMessage
+  optional: true
+- domain: message
+  id: receiveCTSMessage
+  optional: true
+outputs:
+- domain: message
+  id: paraOut
+  optional: true
+- domain: message
+  id: UserDataOut
+  optional: true
+- domain: message
+  id: RTSOUT
+  optional: true
+file_format: 1

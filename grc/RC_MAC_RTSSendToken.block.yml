@@ -1,0 +1,30 @@
+id: RC_MAC_RTSSendToken
+label: RTSSendToken
+category: '[Rc_mac]'
+templates:
+  imports: import RC_MAC
+  make: RC_MAC.RTSSendToken(${sf}, ${samp_rate}, ${bw}, ${nodeToken})
+parameters:
+- id: sf
+  label: Sf
+  dtype: raw
+- id: samp_rate
+  label: Samp_rate
+  dtype: raw
+- id: bw
+  label: Bw
+  dtype: raw
+- id: nodeToken
+  label: Nodetoken
+  dtype: raw
+inputs:
+- domain: message
+  id: RTSToken
+outputs:
+- label: out
+  domain: stream
+  dtype: complex
+- domain: message
+  id: outPara
+  optional: true
+file_format: 1

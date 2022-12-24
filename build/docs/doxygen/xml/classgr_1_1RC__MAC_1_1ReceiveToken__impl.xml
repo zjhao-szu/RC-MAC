@@ -1,0 +1,797 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="classgr_1_1RC__MAC_1_1ReceiveToken__impl" kind="class" language="C++" prot="public">
+    <compoundname>gr::RC_MAC::ReceiveToken_impl</compoundname>
+    <basecompoundref refid="classgr_1_1RC__MAC_1_1ReceiveToken" prot="public" virt="non-virtual">gr::RC_MAC::ReceiveToken</basecompoundref>
+    <includes refid="ReceiveToken__impl_8h" local="no">ReceiveToken_impl.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ab4b1ac921bdcd1f8ba3b37a0048e64f7" prot="private" static="no" mutable="no">
+        <type>uint8_t</type>
+        <definition>uint8_t gr::RC_MAC::ReceiveToken_impl::m_sf</definition>
+        <argsstring></argsstring>
+        <name>m_sf</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="41" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a7e3e691fb88f4b27698767ed30a8bcef" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t gr::RC_MAC::ReceiveToken_impl::m_samp_rate</definition>
+        <argsstring></argsstring>
+        <name>m_samp_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="42" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a748ee26271b98c473b924660ace07730" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t gr::RC_MAC::ReceiveToken_impl::m_bw</definition>
+        <argsstring></argsstring>
+        <name>m_bw</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="43" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1aac32e7468003e81c9c5a8923b74465ce" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t gr::RC_MAC::ReceiveToken_impl::m_number_of_bins</definition>
+        <argsstring></argsstring>
+        <name>m_number_of_bins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="45" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a01a386119d9c177f4f34f04d0f8c6fd7" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t gr::RC_MAC::ReceiveToken_impl::m_fft_size</definition>
+        <argsstring></argsstring>
+        <name>m_fft_size</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="46" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ae34bc0831a7d9288a38eb98fb53d880c" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t gr::RC_MAC::ReceiveToken_impl::m_samples_per_symbol</definition>
+        <argsstring></argsstring>
+        <name>m_samples_per_symbol</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="47" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ad8e68c265f5b965e23207c2406c6aeeb" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; uint16_t &gt;</type>
+        <definition>std::vector&lt;uint16_t&gt; gr::RC_MAC::ReceiveToken_impl::m_sync_words</definition>
+        <argsstring></argsstring>
+        <name>m_sync_words</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="48" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1af3cb1cc2c50ac70c8776ab95d467213f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::RC_MAC::ReceiveToken_impl::m_oversample_rate</definition>
+        <argsstring></argsstring>
+        <name>m_oversample_rate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="50" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="50" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a01be92d380775ac8fbf7a7587302ac46" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::RC_MAC::ReceiveToken_impl::m_up</definition>
+        <argsstring></argsstring>
+        <name>m_up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="51" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ab1c8b6ba333e44a084faa8a75f089b37" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::RC_MAC::ReceiveToken_impl::premab_symb_cnt</definition>
+        <argsstring></argsstring>
+        <name>premab_symb_cnt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="52" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a8d64dada23df0825aecbb685ae049f29" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr::RC_MAC::ReceiveToken_impl::m_upchirp</definition>
+        <argsstring></argsstring>
+        <name>m_upchirp</name>
+        <briefdescription>
+<para>Reference upchirp. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="55" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a4dec3851d23b9fac4b3f1b8c8168998d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr::RC_MAC::ReceiveToken_impl::m_downchirp</definition>
+        <argsstring></argsstring>
+        <name>m_downchirp</name>
+        <briefdescription>
+<para>Reference downchirp. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="56" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a6d6e2c8c69cfa3d563ef0c1252eb5c7b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr::RC_MAC::ReceiveToken_impl::m_dechirped</definition>
+        <argsstring></argsstring>
+        <name>m_dechirped</name>
+        <briefdescription>
+<para>Dechirped symbol. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="57" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a1dfa6bdbc5660b97351eba46f97747bd" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; gr_complex &gt;</type>
+        <definition>std::vector&lt;gr_complex&gt; gr::RC_MAC::ReceiveToken_impl::m_fftVector</definition>
+        <argsstring></argsstring>
+        <name>m_fftVector</name>
+        <briefdescription>
+<para>Result of the FFT. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="58" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a027844611bb29f763a8c5cb2f2b7ce4e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gr::RC_MAC::ReceiveToken_impl::m_upchirp_ifreq</definition>
+        <argsstring></argsstring>
+        <name>m_upchirp_ifreq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="59" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a6c46946413481e88475656f199873a07" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gr::RC_MAC::ReceiveToken_impl::m_downchirp_ifreq</definition>
+        <argsstring></argsstring>
+        <name>m_downchirp_ifreq</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="60" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="60" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a163c7a79f447b52edb072a497c4cbf99" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t gr::RC_MAC::ReceiveToken_impl::m_result</definition>
+        <argsstring></argsstring>
+        <name>m_result</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="62" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a46c1100e4e82e7ca77b619b4f35ce15e" prot="private" static="no" mutable="no">
+        <type>pmt::pmt_t</type>
+        <definition>pmt::pmt_t gr::RC_MAC::ReceiveToken_impl::m_outPort</definition>
+        <argsstring></argsstring>
+        <name>m_outPort</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="63" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1af6bcd73048302eecf5982a4eae08c0b8" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacegr_1_1RC__MAC_1a7c1ccd900ff81ccbc137ae9babbdae61" kindref="member">RECEIVE_TOKEN</ref></type>
+        <definition>RECEIVE_TOKEN gr::RC_MAC::ReceiveToken_impl::m_state</definition>
+        <argsstring></argsstring>
+        <name>m_state</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="64" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ac27387d29727a5b4ccccb05c81224ef9" prot="private" static="no" mutable="no">
+        <type>fft::fft_complex *</type>
+        <definition>fft::fft_complex* gr::RC_MAC::ReceiveToken_impl::m_fft</definition>
+        <argsstring></argsstring>
+        <name>m_fft</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="66" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a3b1d1b93a76b5123462e92868ea80ba6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; float &gt;</type>
+        <definition>std::vector&lt;float&gt; gr::RC_MAC::ReceiveToken_impl::m_window</definition>
+        <argsstring></argsstring>
+        <name>m_window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="67" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="67" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a7e89f4836396220922e5adc264534074" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float gr::RC_MAC::ReceiveToken_impl::m_beta</definition>
+        <argsstring></argsstring>
+        <name>m_beta</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="68" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a2c7b01ef7eef99ea038889c895678cac" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int gr::RC_MAC::ReceiveToken_impl::m_corr_fails</definition>
+        <argsstring></argsstring>
+        <name>m_corr_fails</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="69" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="69" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a3957bd3e7c670c151eb41221e3b5432d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t gr::RC_MAC::ReceiveToken_impl::search_fft_peak</definition>
+        <argsstring>(const lv_32fc_t *fft_result, float *buffer1, float *max_val_p)</argsstring>
+        <name>search_fft_peak</name>
+        <param>
+          <type>const lv_32fc_t *</type>
+          <declname>fft_result</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>buffer1</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>max_val_p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a198fa182568dee4e38a3cafab460d794" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>uint32_t</type>
+        <definition>uint32_t gr::RC_MAC::ReceiveToken_impl::argmax_32f</definition>
+        <argsstring>(float *fft_result, float *max_val_p)</argsstring>
+        <name>argmax_32f</name>
+        <param>
+          <type>float *</type>
+          <declname>fft_result</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>max_val_p</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1afbcd203005cee5a91773a31ecd3e33b6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::RC_MAC::ReceiveToken_impl::instantaneous_frequency</definition>
+        <argsstring>(const gr_complex *in_samples, float *out_freq, const uint32_t windowSize)</argsstring>
+        <name>instantaneous_frequency</name>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>in_samples</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>out_freq</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>windowSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="75" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a4da850d90d5db0c5962e8dd2360310cb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::RC_MAC::ReceiveToken_impl::instantaneous_phase</definition>
+        <argsstring>(const gr_complex *in_samples, float *out_iphase, const uint32_t windowSize)</argsstring>
+        <name>instantaneous_phase</name>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>in_samples</declname>
+        </param>
+        <param>
+          <type>float *</type>
+          <declname>out_iphase</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>windowSize</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1abaa728332d8d68fc05a0ac650005d7c5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr::RC_MAC::ReceiveToken_impl::cross_correlate_ifreq_fast</definition>
+        <argsstring>(const float *samples_ifreq, const float *ideal_chirp, const uint32_t window)</argsstring>
+        <name>cross_correlate_ifreq_fast</name>
+        <param>
+          <type>const float *</type>
+          <declname>samples_ifreq</declname>
+        </param>
+        <param>
+          <type>const float *</type>
+          <declname>ideal_chirp</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="77" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ac58b4e750ef206a64346d57cacda3a81" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr::RC_MAC::ReceiveToken_impl::cross_correlate_fast</definition>
+        <argsstring>(const gr_complex *samples, const gr_complex *ideal_chirp, const uint32_t window)</argsstring>
+        <name>cross_correlate_fast</name>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>samples</declname>
+        </param>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>ideal_chirp</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="78" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a019c7a605aae66e9f880a85ef31cf90d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr::RC_MAC::ReceiveToken_impl::cross_correlate</definition>
+        <argsstring>(const gr_complex *samples_1, const gr_complex *samples_2, const uint32_t window)</argsstring>
+        <name>cross_correlate</name>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>samples_1</declname>
+        </param>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>samples_2</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="79" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a6597f31955bcaa12cc1648ef62851c6c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr::RC_MAC::ReceiveToken_impl::cross_correlate_ifreq</definition>
+        <argsstring>(const float *samples_ifreq, const std::vector&lt; float &gt; &amp;ideal_chirp, const uint32_t to_idx)</argsstring>
+        <name>cross_correlate_ifreq</name>
+        <param>
+          <type>const float *</type>
+          <declname>samples_ifreq</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>ideal_chirp</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>to_idx</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1abce56464c34d04fd9e35c4a36293f12c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr::RC_MAC::ReceiveToken_impl::detect_upchirp</definition>
+        <argsstring>(const gr_complex *samples, const uint32_t window, int32_t *index)</argsstring>
+        <name>detect_upchirp</name>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>samples</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="82" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a84c17e60efe6d49391814daba5ede641" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr::RC_MAC::ReceiveToken_impl::detect_downchirp</definition>
+        <argsstring>(const gr_complex *samples, const uint32_t window)</argsstring>
+        <name>detect_downchirp</name>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>samples</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="83" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a85849cd552476818523b63fc5be9556b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr::RC_MAC::ReceiveToken_impl::detect_preamble_autocorr</definition>
+        <argsstring>(const gr_complex *samples, const uint32_t window)</argsstring>
+        <name>detect_preamble_autocorr</name>
+        <param>
+          <type>const gr_complex *</type>
+          <declname>samples</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1aeb39205dc7d2649d18a7960e978db512" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr::RC_MAC::ReceiveToken_impl::sliding_norm_cross_correlate_upchirp</definition>
+        <argsstring>(const float *samples_ifreq, const uint32_t window, int32_t *index)</argsstring>
+        <name>sliding_norm_cross_correlate_upchirp</name>
+        <param>
+          <type>const float *</type>
+          <declname>samples_ifreq</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int32_t *</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a42620761f598555bf253b4888deebb96" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float gr::RC_MAC::ReceiveToken_impl::stddev</definition>
+        <argsstring>(const float *values, const uint32_t len, const float mean)</argsstring>
+        <name>stddev</name>
+        <param>
+          <type>const float *</type>
+          <declname>values</declname>
+        </param>
+        <param>
+          <type>const uint32_t</type>
+          <declname>len</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>mean</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="86" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a8291251d4e7d9f7bc1bb424a6c0a0245" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::RC_MAC::ReceiveToken_impl::ReceiveToken_impl</definition>
+        <argsstring>(uint8_t sf, uint32_t samp_rate, uint32_t bw)</argsstring>
+        <name>ReceiveToken_impl</name>
+        <param>
+          <type>uint8_t</type>
+          <declname>sf</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>samp_rate</declname>
+        </param>
+        <param>
+          <type>uint32_t</type>
+          <declname>bw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ae103ff042066eab4d8a4e2fd354e1346" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>gr::RC_MAC::ReceiveToken_impl::~ReceiveToken_impl</definition>
+        <argsstring>()</argsstring>
+        <name>~ReceiveToken_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1aee4d1c62675c257d2adf58de6724fbfb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void gr::RC_MAC::ReceiveToken_impl::forecast</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items_required)</argsstring>
+        <name>forecast</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items_required</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a7af14a79c07291da0af035eb486654f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int gr::RC_MAC::ReceiveToken_impl::general_work</definition>
+        <argsstring>(int noutput_items, gr_vector_int &amp;ninput_items, gr_vector_const_void_star &amp;input_items, gr_vector_void_star &amp;output_items)</argsstring>
+        <name>general_work</name>
+        <param>
+          <type>int</type>
+          <declname>noutput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_int &amp;</type>
+          <declname>ninput_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_const_void_star &amp;</type>
+          <declname>input_items</declname>
+        </param>
+        <param>
+          <type>gr_vector_void_star &amp;</type>
+          <declname>output_items</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="95" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="17">
+        <label>gr::RC_MAC::ReceiveToken</label>
+        <link refid="classgr_1_1RC__MAC_1_1ReceiveToken"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>gr::RC_MAC::ReceiveToken_impl</label>
+        <link refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>gr::block</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="20">
+        <label>gr::RC_MAC::ReceiveToken</label>
+        <link refid="classgr_1_1RC__MAC_1_1ReceiveToken"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>gr::RC_MAC::ReceiveToken_impl</label>
+        <link refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>gr::block</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" line="39" column="1" bodyfile="/home/zjhao/gr-RC_MAC/lib/ReceiveToken_impl.h" bodystart="38" bodyend="100"/>
+    <listofallmembers>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a198fa182568dee4e38a3cafab460d794" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>argmax_32f</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a019c7a605aae66e9f880a85ef31cf90d" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>cross_correlate</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ac58b4e750ef206a64346d57cacda3a81" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>cross_correlate_fast</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a6597f31955bcaa12cc1648ef62851c6c" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>cross_correlate_ifreq</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1abaa728332d8d68fc05a0ac650005d7c5" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>cross_correlate_ifreq_fast</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a84c17e60efe6d49391814daba5ede641" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>detect_downchirp</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a85849cd552476818523b63fc5be9556b" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>detect_preamble_autocorr</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1abce56464c34d04fd9e35c4a36293f12c" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>detect_upchirp</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1aee4d1c62675c257d2adf58de6724fbfb" prot="public" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>forecast</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a7af14a79c07291da0af035eb486654f9" prot="public" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>general_work</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1afbcd203005cee5a91773a31ecd3e33b6" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>instantaneous_frequency</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a4da850d90d5db0c5962e8dd2360310cb" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>instantaneous_phase</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a7e89f4836396220922e5adc264534074" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_beta</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a748ee26271b98c473b924660ace07730" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_bw</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a2c7b01ef7eef99ea038889c895678cac" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_corr_fails</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a6d6e2c8c69cfa3d563ef0c1252eb5c7b" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_dechirped</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a4dec3851d23b9fac4b3f1b8c8168998d" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_downchirp</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a6c46946413481e88475656f199873a07" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_downchirp_ifreq</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ac27387d29727a5b4ccccb05c81224ef9" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_fft</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a01a386119d9c177f4f34f04d0f8c6fd7" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_fft_size</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a1dfa6bdbc5660b97351eba46f97747bd" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_fftVector</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1aac32e7468003e81c9c5a8923b74465ce" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_number_of_bins</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a46c1100e4e82e7ca77b619b4f35ce15e" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_outPort</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1af3cb1cc2c50ac70c8776ab95d467213f" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_oversample_rate</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a163c7a79f447b52edb072a497c4cbf99" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_result</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a7e3e691fb88f4b27698767ed30a8bcef" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_samp_rate</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ae34bc0831a7d9288a38eb98fb53d880c" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_samples_per_symbol</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ab4b1ac921bdcd1f8ba3b37a0048e64f7" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_sf</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1af6bcd73048302eecf5982a4eae08c0b8" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_state</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ad8e68c265f5b965e23207c2406c6aeeb" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_sync_words</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a01be92d380775ac8fbf7a7587302ac46" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_up</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a8d64dada23df0825aecbb685ae049f29" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_upchirp</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a027844611bb29f763a8c5cb2f2b7ce4e" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_upchirp_ifreq</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a3b1d1b93a76b5123462e92868ea80ba6" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>m_window</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken_1a0b2aab77624a4cee965009fa8a15736b" prot="public" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>make</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ab1c8b6ba333e44a084faa8a75f089b37" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>premab_symb_cnt</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a8291251d4e7d9f7bc1bb424a6c0a0245" prot="public" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>ReceiveToken_impl</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a3957bd3e7c670c151eb41221e3b5432d" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>search_fft_peak</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1aeb39205dc7d2649d18a7960e978db512" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>sliding_norm_cross_correlate_upchirp</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken_1ae647105676fe420d4bf5154ea940220c" prot="public" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>sptr</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1a42620761f598555bf253b4888deebb96" prot="private" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>stddev</name></member>
+      <member refid="classgr_1_1RC__MAC_1_1ReceiveToken__impl_1ae103ff042066eab4d8a4e2fd354e1346" prot="public" virt="non-virtual"><scope>gr::RC_MAC::ReceiveToken_impl</scope><name>~ReceiveToken_impl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

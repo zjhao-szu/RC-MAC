@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.13">
+  <compounddef id="namespacegr_1_1RC__MAC" kind="namespace" language="C++">
+    <compoundname>gr::RC_MAC</compoundname>
+    <innerclass refid="classgr_1_1RC__MAC_1_1CTSSender" prot="public">gr::RC_MAC::CTSSender</innerclass>
+    <innerclass refid="classgr_1_1RC__MAC_1_1ReceiveToken" prot="public">gr::RC_MAC::ReceiveToken</innerclass>
+    <innerclass refid="classgr_1_1RC__MAC_1_1RTSSender" prot="public">gr::RC_MAC::RTSSender</innerclass>
+    <innerclass refid="classgr_1_1RC__MAC_1_1RTSSendToken" prot="public">gr::RC_MAC::RTSSendToken</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacegr_1_1RC__MAC_1a432e94fb38ed3dd4a82729067253d476" prot="public" static="no">
+        <name>CTS_Class_Type</name>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a432e94fb38ed3dd4a82729067253d476a7b4cc78effc5094b890cb5c3453a8c2d" prot="public">
+          <name>CTS_ClassA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a432e94fb38ed3dd4a82729067253d476a3c163e97d586e811cae0db8ce71057d3" prot="public">
+          <name>CTS_ClassB</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a432e94fb38ed3dd4a82729067253d476a9693a2c64902475a3bf4019492b3a44f" prot="public">
+          <name>CTS_ClassC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/include/RC_MAC/CTSSender.h" line="29" column="1" bodyfile="/home/zjhao/gr-RC_MAC/include/RC_MAC/CTSSender.h" bodystart="29" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44b" prot="public" static="no">
+        <name>CTS_Sender_State</name>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44ba4805e18cde570b1086505fb5d4ffb66e" prot="public">
+          <name>S_CTS_Reset</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44bad5addf39c230e30dfcb37474c75120ce" prot="public">
+          <name>S_CTS_Receive</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44ba47cf9c94d28bc2b2364aeab977648a1f" prot="public">
+          <name>S_CTS_Send_Data</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44ba07cceaa862721335180c0343b770c0ce" prot="public">
+          <name>S_CTS_Send_CTS_ClassA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44ba37d0cdd02aa817fdc002f7074b07e0f6" prot="public">
+          <name>S_CTS_Send_CTS_ClassB</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44bad5dc8c92236ff7131b640a10ec84c77c" prot="public">
+          <name>S_CTS_Send_CTS_ClassC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a633d4d6c3fc4b2d7d5a9b65d3130e44bab2e9c752ff10f5789e6036e2647aba5a" prot="public">
+          <name>S_CTS_Beacon</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/include/RC_MAC/CTSSender.h" line="34" column="1" bodyfile="/home/zjhao/gr-RC_MAC/include/RC_MAC/CTSSender.h" bodystart="34" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacegr_1_1RC__MAC_1a7c1ccd900ff81ccbc137ae9babbdae61" prot="public" static="no">
+        <name>RECEIVE_TOKEN</name>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a7c1ccd900ff81ccbc137ae9babbdae61a2ab5e56a9d496351322706513a568a18" prot="public">
+          <name>STATE_TOKEN_DETECT_PREMBLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a7c1ccd900ff81ccbc137ae9babbdae61a85c2ef0d5342077cf8d3ae15b88b4e46" prot="public">
+          <name>STATE_TOKEN_SYNC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a7c1ccd900ff81ccbc137ae9babbdae61a27915379ed4c49e44767422e89ce5fe3" prot="public">
+          <name>STATE_TOKEN_FIND_SFD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a7c1ccd900ff81ccbc137ae9babbdae61a91dbb1ba6149e700afbff4035fe944e7" prot="public">
+          <name>STATE_TOKEN_PAUSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a7c1ccd900ff81ccbc137ae9babbdae61aa31e1a7a7df44a85549ce8dfd0772558" prot="public">
+          <name>STATE_TOKEN_READ_TOKEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/include/RC_MAC/ReceiveToken.h" line="29" column="1" bodyfile="/home/zjhao/gr-RC_MAC/include/RC_MAC/ReceiveToken.h" bodystart="29" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667" prot="public" static="no">
+        <name>RTS_Sender_State</name>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a9cae153efe99dc9cec1207204f2f8202" prot="public">
+          <name>S_RTS_RESET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a4f429edd04d80c6fe3d93141493c5e01" prot="public">
+          <name>S_RTS_RECEIVE_DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a60ca97d74333db48bddeafebf1ee0f42" prot="public">
+          <name>S_RTS_CAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a731e955ff07dd83f8bbd89cacf5925f3" prot="public">
+          <name>S_RTS_WAIT_DATA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667ab2989e49bdc58a92f6c5bdaf0d9dd8b1" prot="public">
+          <name>S_RTS_WAIT_CTS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667ae753b2566e2461ea8a14acb951a5d3c6" prot="public">
+          <name>S_RTS_send_RTS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a6265e41f9b89ab7ab6573290501df3ab" prot="public">
+          <name>S_RTS_SLEEP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a197987100fb88bc03ac0cb1aac7796d0" prot="public">
+          <name>S_RTS_TO_RECEIVE1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a174ccc7f24bd6b91fecb3c4c885b14b2" prot="public">
+          <name>S_RTS_RECEIVE1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667ab6f7d6c87d9445496687a54fb155e050" prot="public">
+          <name>S_RTS_TO_RECEIVE2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a14545560c468600c174a54008233a552" prot="public">
+          <name>S_RTS_RECEIVE2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a06c60466ddca9a9756a3061e19f34356" prot="public">
+          <name>S_RTS_Send_Data</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667a1bf9d2704c648bb1231d0ab2aaa73e88" prot="public">
+          <name>S_RTS_RECEIVE_Slot</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667ac615e5fa843cda5427a5cc0d810225c0" prot="public">
+          <name>S_RTS_RECEIVE_Class_C</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a305540a56e3c26c806bd5391e39a7667aaf0ed68eb06ac6120f9c9563a18a2b89" prot="public">
+          <name>S_RTS_BEACON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/include/RC_MAC/RTSSender.h" line="29" column="1" bodyfile="/home/zjhao/gr-RC_MAC/include/RC_MAC/RTSSender.h" bodystart="29" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacegr_1_1RC__MAC_1a0389363cde11a096a20bc3d8088b3f95" prot="public" static="no">
+        <name>RTS_Class_Type</name>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a0389363cde11a096a20bc3d8088b3f95a7f3c105324acc44094da42be4378dabc" prot="public">
+          <name>M_RTS_CLASSA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a0389363cde11a096a20bc3d8088b3f95addd678861eca905895f06017b3ba41fa" prot="public">
+          <name>M_RTS_CLASSB</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1a0389363cde11a096a20bc3d8088b3f95a183163f1cf77661bfaa8530ca7cfc549" prot="public">
+          <name>M_RTS_CLASSC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/include/RC_MAC/RTSSender.h" line="46" column="1" bodyfile="/home/zjhao/gr-RC_MAC/include/RC_MAC/RTSSender.h" bodystart="46" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="enum" id="namespacegr_1_1RC__MAC_1aa519a6710824b310fdf1bef27304ede9" prot="public" static="no">
+        <name>STATE_RTS_TOKEN</name>
+        <enumvalue id="namespacegr_1_1RC__MAC_1aa519a6710824b310fdf1bef27304ede9afaee01830fe9e46a416d21cc6060b329" prot="public">
+          <name>STATE_RTS_RESET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacegr_1_1RC__MAC_1aa519a6710824b310fdf1bef27304ede9a75ef211afc9c4c09079c1925840d04e3" prot="public">
+          <name>STATE_RTS_SEND_TOKEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/zjhao/gr-RC_MAC/include/RC_MAC/RTSSendToken.h" line="29" column="1" bodyfile="/home/zjhao/gr-RC_MAC/include/RC_MAC/RTSSendToken.h" bodystart="29" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/zjhao/gr-RC_MAC/include/RC_MAC/CTSSender.h" line="28" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,37 @@
+id: RC_MAC_CTSSender
+label: CTSSender
+category: '[Rc_mac]'
+templates:
+  imports: import RC_MAC
+  make: RC_MAC.CTSSender(${sf}, ${bw}, ${sampRate}, ${classType})
+parameters:
+- id: sf
+  label: Sf
+  dtype: raw
+- id: bw
+  label: Bw
+  dtype: raw
+- id: sampRate
+  label: Samprate
+  dtype: raw
+- id: classType
+  label: Classtype
+  dtype: int
+inputs:
+- label: in
+  domain: stream
+  dtype: complex
+- domain: message
+  id: receiveData
+  optional: true
+- domain: message
+  id: receiveRTS
+  optional: true
+outputs:
+- domain: message
+  id: OutData
+  optional: true
+- domain: message
+  id: OutCTS
+  optional: true
+file_format: 1
