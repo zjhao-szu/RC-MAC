@@ -1,0 +1,25 @@
+id: RC_MAC_PHY_Sender
+label: Rc Mac Phy Sender
+category: '[Rc_mac]'
+
+parameters: []
+
+inputs:
+-   label: in
+    domain: message
+    dtype: message
+
+outputs:
+-   label: out
+    dtype: complex
+    vlen: 1
+
+templates:
+    imports: 'from RC_MAC_PHY_Sender import RC_MAC_PHY_Sender  # grc-generated hier_block'
+    make: RC_MAC_PHY_Sender()
+    callbacks: []
+
+documentation: /home/zjhao/.grc_gnuradio/RC_MAC_PHY_Sender.py
+grc_source: /home/zjhao/gr-RC_MAC/apps/RC_MAC_SendPhy.grc
+
+file_format: 1
