@@ -146,8 +146,10 @@ namespace gr {
       double getTimeval(const struct timeval startTime,const struct timeval endTime);
       void sendParaMsg();
       bool isNumeric(std::string const &str);
+
+      std::ofstream out_record_file;
      public:
-      RTSSender_impl(uint32_t sf,uint32_t bw,int classType,uint32_t NodeId,uint32_t sampRate);
+      RTSSender_impl(uint32_t sf,uint32_t bw,int classType,uint32_t NodeId,uint32_t sampRate,std::string filename);
       ~RTSSender_impl();
 
       // Where all the action really happens

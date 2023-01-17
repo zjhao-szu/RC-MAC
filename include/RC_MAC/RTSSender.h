@@ -66,7 +66,7 @@ namespace gr {
        * class. RC_MAC::RTSSender::make is the public interface for
        * creating new instances.
        */
-      static sptr make(uint32_t sf,uint32_t bw,int classType,uint32_t NodeId,uint32_t sampRate);
+      static sptr make(uint32_t sf,uint32_t bw,int classType,uint32_t NodeId,uint32_t sampRate,std::string filename);
     };
 
   } // namespace RC_MAC

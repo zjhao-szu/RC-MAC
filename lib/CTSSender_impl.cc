@@ -161,6 +161,7 @@ namespace gr {
       }else{
         std::cout<<"************user data message******************"<<std::endl;
         std::cout<<str<<std::endl;
+        m_state = S_CTS_Reset;
       }
     }
 
@@ -302,6 +303,9 @@ namespace gr {
         // message_port_pub(m_out_CTS_port,CTSToken);
         // m_state = S_CTS_Receive;
         break;
+      }
+      case S_CTS_Send_CTS_ClassA:{
+        
       }
       default:
         
