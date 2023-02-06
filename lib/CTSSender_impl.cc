@@ -304,9 +304,6 @@ namespace gr {
         // m_state = S_CTS_Receive;
         break;
       }
-      case S_CTS_Send_CTS_ClassA:{
-        
-      }
       default:
         
         break;

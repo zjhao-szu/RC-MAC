@@ -62,9 +62,12 @@ namespace gr {
     
       std::vector<gr_complex> m_upchirp,m_downchirp;
 
+      int usesendCount;
+
       RTS_Class_Type m_classType;
       uint32_t m_nodeId;
       uint32_t m_duration;
+      bool m_SendRequest;
       
       // //接收NodeID、Duation
       uint32_t m_ReceiveNodeId;
@@ -109,7 +112,9 @@ namespace gr {
       uint32_t m_before_receive2_ms;
       uint32_t m_receive1_window_count;
       uint32_t m_receive2_window_count;
-      
+      bool offsetUse;    
+      int offsetCount ;
+
       // //模拟class B
       bool m_firstSendBeacon;
       uint32_t m_slotReceive_window_count;
@@ -148,6 +153,7 @@ namespace gr {
       bool isNumeric(std::string const &str);
 
       std::ofstream out_record_file;
+      std::string m_filename;
      public:
       RTSSender_impl(uint32_t sf,uint32_t bw,int classType,uint32_t NodeId,uint32_t sampRate,std::string filename);
       ~RTSSender_impl();

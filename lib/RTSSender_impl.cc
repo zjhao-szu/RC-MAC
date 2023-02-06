@@ -98,8 +98,10 @@ namespace gr {
         //初始化CAD功能
         m_cad_count = 8;
         m_cad_detect = false;
-        m_SleepWindowCount = 10;
-        m_WaitWindowCount = 10;
+        m_SleepWindowCount = 100;
+        m_WaitWindowCount = 100;
+        offsetUse = false;
+        offsetCount = 0;
         //class A\B\C windows params;
 
         // //class A
@@ -123,8 +125,10 @@ namespace gr {
         m_receiveTime = 0;
         m_CTSToken = m_nodeId + 1;
         m_sendDataState = false;
-
+        m_filename = filename;
         out_record_file.open(m_filename, std::ios::out | std::ios::trunc);
+        usesendCount = 0;
+        m_SendRequest = false;
     }
 
     /*
@@ -138,7 +142,7 @@ namespace gr {
     RTSSender_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
     {
       /* <+forecast+> e.g. ninput_items_required[0] = noutput_items */
-	    // ninput_items_required[0] = noutput_items * m_samples_per_symbol;
+	    ninput_items_required[0] = noutput_items * m_samples_per_symbol;
     }
     // /********************************************************************
     //  * 接收用户需要发送的数据包
@@ -158,7 +162,15 @@ namespace gr {
         }else{
           std::cout<<"当前状态为忙碌状态，缓存需要发送的信息，状态不进行切换!!!"<<std::endl;
           out_record_file<<"当前状态为忙碌状态，缓存需要发送的信息，状态不进行切换!!!"<<m_userDatas.back()<<std::endl;
+          usesendCount++;
+          if(usesendCount >= 10){
+              m_state = S_RTS_CAD;
+              m_cad_count = 8;
+              m_cad_detect = false;
+              usesendCount = 0;
+          }
         } 			
+        
       // }
       
     }
@@ -192,8 +204,22 @@ namespace gr {
       std::string str = pmt::symbol_to_string(msg);
       std::cout<<"receiveDecodeMessage::Parse Message::"<<str<<std::endl;
       out_record_file<<"receiveDecodeMessage::Parse Message::"<<str<<std::endl;
+      offsetCount++;
       if(str.find("type") == std::string::npos){
         messageDebugPrint(msg);
+        if(str.find("RTS") != std::string::npos ){
+           std::string nodeId = str.substr(str.find_last_of(":")+1,1);
+           std::cout<<"receive RTS is "<<nodeId<<std::endl;
+           out_record_file<<"receive RTS is "<<nodeId<<std::endl;
+            if(isNumeric(nodeId)){
+                int nowId = std::stoi(nodeId);
+                if(nowId != m_nodeId && !m_SendRequest){
+                  m_state = S_RTS_SLEEP;
+                  m_SleepWindowCount = 100 * rand() % 10 + 30;
+                  out_record_file<<"sleep Count   is "<<m_SleepWindowCount<<std::endl;
+                }	
+            }
+        }
       }else{
         std::unordered_map<std::string,std::string> mesMap = parseMessage(str);
         // mesMap["Type"] == "CTS"
@@ -206,7 +232,7 @@ namespace gr {
           }else{
             m_ReceiveNodeId = m_nodeId + 1;
           } 
-
+          m_SendRequest = false;
           std::cout<<"NodeID:"<<m_nodeId<<" receive CTS数据包!!!"<<std::endl;
           out_record_file<<"NodeID:"<<m_nodeId<<" receive CTS数据包!!!"<<std::endl;
           std::cout<<"Receive winNode ID is"<<m_ReceiveNodeId<<std::endl;
@@ -218,13 +244,14 @@ namespace gr {
             m_state = S_RTS_CAD;
             m_cad_count = 8;
             m_sendDataState = true;
+            offsetUse = false;
             gettimeofday(&m_endReceiveTime,NULL);
             m_receiveTime += getTimeval(m_startReceiveTime,m_endReceiveTime);
           }else if(m_ReceiveNodeId != m_nodeId){
             std::cout<<"m_NodeId: "<<m_nodeId<<" 收到CTS数据包,获胜节点为: "<<m_ReceiveNodeId<<std::endl;
             out_record_file<<"m_NodeId: "<<m_nodeId<<" 收到CTS数据包,获胜节点为: "<<m_ReceiveNodeId<<std::endl;
             m_state = S_RTS_SLEEP;
-            m_SleepWindowCount = 10;
+            m_SleepWindowCount = 100;
             gettimeofday(&m_endReceiveTime,NULL);
             m_receiveTime += getTimeval(m_startReceiveTime,m_endReceiveTime);
             m_paraState = 3;
@@ -234,7 +261,7 @@ namespace gr {
             //   m_paraState = 3;
             // }
             sendParaMsg();
-          }
+          } 
         }
         // if(strcmp(type.c_str(),"RTS") == 0){
         //   m_ReceiveNodeId = std::stoi(mesMap["NodeId"]);	
@@ -269,7 +296,7 @@ namespace gr {
         m_receiveTime += getTimeval(m_startReceiveTime,m_endReceiveTime);
       }else{
         m_state = S_RTS_SLEEP;
-        m_SleepWindowCount = 10;
+        m_SleepWindowCount = 100;
         gettimeofday(&m_endReceiveTime,NULL);
         m_receiveTime += getTimeval(m_startReceiveTime,m_endReceiveTime);
         // if(m_state == S_RTS_RECEIVE2){
@@ -336,13 +363,10 @@ namespace gr {
     // ********************************************************************/
     void
     RTSSender_impl::sendRTSByPacket(){
-      int totalLen = 0;
-      for(int i = 0;i < m_userDatas.size();i++){
-        totalLen += m_userDatas[i].length();
-      }
       std::string msgString("Type:RTS,NodeId:" + std::to_string(m_nodeId));
       pmt::pmt_t msg = pmt::string_to_symbol(msgString);
       message_port_pub(m_out_userdata,msg);
+      m_SendRequest = true;
       std::cout<<"RTS packet 发送结束"<<std::endl;
       out_record_file<<"RTS packet 发送结束"<<std::endl;
     }
@@ -364,10 +388,10 @@ namespace gr {
       //两种方案后续都可以考虑
       std::string msgData = "";
       int indexSize = 3;
-      if(m_userDatas.size() > 3){
+      if(m_userDatas.size() > indexSize){
         for(int i = 0;i < indexSize;i++){
           msgData.append(m_userDatas.back());
-          msgData.pop_back();
+          m_userDatas.pop_back();
         }
       }else{
         for(auto & data : m_userDatas){
@@ -378,8 +402,8 @@ namespace gr {
       
       pmt::pmt_t datamsg = pmt::string_to_symbol(msgData);
       message_port_pub(m_out_userdata,datamsg);
-      std::cout<<"全部数据发送完全，总共发送数据: "<<totalLen<<" 个字符数据"<<std::endl;
-      out_record_file<<"全部数据发送完全，总共发送数据: "<<totalLen<<" 个字符数据"<<std::endl;
+      std::cout<<"全部数据发送完全，总共发送数据: "<<msgData.length()<<" 个字符数据"<<std::endl;
+      out_record_file<<"全部数据发送完全，总共发送数据: "<<msgData.length()<<" 个字符数据"<<std::endl;
       m_userDatas.clear();
     }
     void 
@@ -492,10 +516,11 @@ namespace gr {
           // m_receive1_window_count = 1000;
           // m_receive2_window_count = 1000;
           // m_slotReceive_window_count = 1000;
-          m_SleepWindowCount = 10;
+          m_SleepWindowCount = 100;
           m_state = S_RTS_RECEIVE_DATA;
           m_sendDataState = false;
-          
+          offsetUse = false;
+          offsetCount = 0;
           break;
         }
         case S_RTS_RECEIVE_DATA: {
@@ -509,6 +534,18 @@ namespace gr {
           break;
         }
         case S_RTS_CAD: {
+          int offset = 0;
+          if(m_sendDataState && !offsetUse){
+            offset = m_samples_per_symbol * 100;
+            num_consumed =  offset  +  m_samples_per_symbol;
+            offsetUse = true;
+            std::cout<<"num consumed is "<<num_consumed<<std::endl;
+            out_record_file<<"num consumed is "<<num_consumed<<std::endl;
+            std::cout<<"offset has move!!!!! offsetCount is "<< offsetCount <<std::endl;
+            out_record_file<<"offset has move!!!!!offsetCount is "<< offsetCount<<std::endl;
+            offsetCount = 0;
+          }
+          const gr_complex * tmpchirp =   in;
           if(m_cad_count == 8){
             gettimeofday(&m_startDIFSTime,NULL);
           }
@@ -517,7 +554,7 @@ namespace gr {
           gr_complex * outbuf =  (gr_complex *) volk_malloc(m_fft_size * sizeof(gr_complex),volk_get_alignment());
           float * fft_res_mag = (float*)volk_malloc(m_fft_size*sizeof(float), volk_get_alignment());
 
-          volk_32fc_x2_multiply_32fc(signalBlockBuffer, in, &m_downchirp[0], m_samples_per_symbol);
+          volk_32fc_x2_multiply_32fc(signalBlockBuffer, tmpchirp, &m_downchirp[0], m_samples_per_symbol);
           
           memset(m_fft->get_inbuf(), 0,m_fft_size*sizeof(gr_complex));
           memcpy(m_fft->get_inbuf(),&signalBlockBuffer[0],m_samples_per_symbol*sizeof(gr_complex));
@@ -526,7 +563,7 @@ namespace gr {
           maxIndex = searchFFTPeek(m_fft->get_outbuf(),&maxValue,fft_res_mag);
           std::cout<<maxValue<<std::endl;
           out_record_file<<maxValue<<std::endl;
-          if(maxValue >= 0.15){
+          if(maxValue >= 1.5){
             // std::cout<<"max value is"<<maxValue<<std::endl;
             m_argmaxHistory.insert(m_argmaxHistory.begin(),maxIndex);
             m_cad_detect = true;
@@ -542,7 +579,7 @@ namespace gr {
             //SLEEP 会等待二进制退避算法结束休眠
             //reset 则会重置缓冲区的数据，但是我们还没发送数据，所以这里状态不能切换至reset状态
             m_state = S_RTS_SLEEP;
-            m_SleepWindowCount = 10;
+            m_SleepWindowCount = 100;
             gettimeofday(&m_endDIFSTime,NULL);
             m_DIFSTime = getTimeval(m_startDIFSTime,m_endDIFSTime);
             m_paraState = 1;
@@ -556,7 +593,6 @@ namespace gr {
               out_record_file<<"==============CAD Detect count is 0 && 没有CAD 被检测============"<<std::endl;
               out_record_file<<"==============进入发送Data阶段===================================="<<std::endl;
               m_state = S_RTS_Send_Data;
-              
             }else{
               std::cout<<"==============CAD Detect count is 0 && 没有CAD 被检测============"<<std::endl;
               std::cout<<"==============进入发送RTS阶段===================================="<<std::endl;
@@ -577,8 +613,9 @@ namespace gr {
           // #if SEND_MODULE == SEND_MODULE_PACKET
           
           sendRTSByPacket();
+          std::cout<<"RTS send Over"<<std::endl;
           m_state = S_RTS_WAIT_CTS;
-          m_WaitWindowCount = 10;
+          // m_WaitWindowCount = 1000;
           break;
           // #else //TODO
           // sendRTSBySerialization();
@@ -592,19 +629,23 @@ namespace gr {
         }
         case S_RTS_WAIT_CTS : {
           //if is RTS or CTS 
-          m_WaitWindowCount--;
-          if(m_WaitWindowCount == 0){
-            m_SleepWindowCount = 10;
-            m_state = S_RTS_SLEEP;
-          }
+          // m_WaitWindowCount--;
+          // if(m_WaitWindowCount == 0){
+          //   m_SleepWindowCount = 1000;
+          //   m_state = S_RTS_SLEEP;
+          // }
           break;
         }
         case S_RTS_SLEEP: { //wait 10 window
           m_SleepWindowCount--;
+          num_consumed = 2 *  m_samples_per_symbol;
           if(m_SleepWindowCount == 0){
+            std::cout<<"send data state is:: "<<m_sendDataState<<std::endl;
+             out_record_file<<"send data state is:: "<<m_sendDataState<<std::endl;
             if(m_sendDataState){
               m_cad_count = 8;
               m_state = S_RTS_CAD;
+              offsetUse = false;
             }else{
               m_state = S_RTS_RESET;
             }

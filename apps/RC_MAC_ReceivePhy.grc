@@ -140,6 +140,23 @@ blocks:
     coordinate: [400, 20.0]
     rotation: 0
     state: enabled
+- name: channelsf
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: sf
+    short_id: ''
+    type: intx
+    value: '7'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [192, 100.0]
+    rotation: 0
+    state: true
 - name: interp_fir_filter_xxx_0
   id: interp_fir_filter_xxx
   parameters:
@@ -156,7 +173,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [304, 156.0]
+    coordinate: [304, 184.0]
     rotation: 0
     state: true
 - name: lora_sdr_crc_verif_0
@@ -168,7 +185,7 @@ blocks:
     frequency: center_freq
     maxoutbuf: '0'
     minoutbuf: '0'
-    sf: sf
+    sf: channelsf
   states:
     bus_sink: false
     bus_source: false
@@ -184,7 +201,7 @@ blocks:
     comment: ''
     maxoutbuf: '0'
     minoutbuf: '0'
-    sf: sf
+    sf: channelsf
   states:
     bus_sink: false
     bus_source: false
@@ -216,7 +233,7 @@ blocks:
     impl_head: impl_head
     maxoutbuf: '0'
     minoutbuf: '0'
-    sf: sf
+    sf: channelsf
   states:
     bus_sink: false
     bus_source: false
@@ -235,7 +252,7 @@ blocks:
     maxoutbuf: '0'
     minoutbuf: '0'
     samp_rate: ''
-    sf: sf
+    sf: channelsf
     sync_word: '0x12'
   states:
     bus_sink: false
@@ -303,7 +320,7 @@ blocks:
     maxoutbuf: '0'
     minoutbuf: '0'
     samp_rate: samp_rate
-    sf: sf
+    sf: channelsf
   states:
     bus_sink: false
     bus_source: false
@@ -359,7 +376,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [64, 188.0]
+    coordinate: [160, 264.0]
     rotation: 0
     state: true
 

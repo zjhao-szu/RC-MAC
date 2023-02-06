@@ -24,7 +24,7 @@ from gnuradio.eng_arg import eng_float, intx
 from gnuradio import eng_notation
 from gnuradio import uhd
 import time
-from rc_mac_phy import rc_mac_phy  # grc-generated hier_block
+from rc_mac_phy_receiver import rc_mac_phy_receiver  # grc-generated hier_block
 import RC_MAC
 
 
@@ -46,7 +46,7 @@ class RTSSender(gr.top_block):
         # Blocks
         ##################################################
         self.uhd_usrp_source_0 = uhd.usrp_source(
-            ",".join(("serial=3241A01", "")),
+            ",".join(("serial=3241A4A", "")),
             uhd.stream_args(
                 cpu_format="fc32",
                 args='',
@@ -60,7 +60,7 @@ class RTSSender(gr.top_block):
         self.uhd_usrp_source_0.set_samp_rate(samp_rate)
         # No synchronization enforced.
         self.uhd_usrp_sink_0 = uhd.usrp_sink(
-            ",".join(("serial=3241A01", "")),
+            ",".join(("serial=3241A4A", "")),
             uhd.stream_args(
                 cpu_format="fc32",
                 args='',
@@ -75,9 +75,9 @@ class RTSSender(gr.top_block):
         self.uhd_usrp_sink_0.set_bandwidth(250000, 0)
         self.uhd_usrp_sink_0.set_samp_rate(samp_rate)
         # No synchronization enforced.
-        self.rc_mac_phy_0 = rc_mac_phy()
-        self.blocks_message_strobe_0 = blocks.message_strobe(pmt.intern("hello world"), 1000)
-        self.RC_MAC_RTSSender_0 = RC_MAC.RTSSender(sf, bw, classType, 1, samp_rate)
+        self.rc_mac_phy_receiver_0 = rc_mac_phy_receiver()
+        self.blocks_message_strobe_random_0 = blocks.message_strobe_random(pmt.intern("hello world,my name is node 1!"), blocks.STROBE_UNIFORM, 200, 10)
+        self.RC_MAC_RTSSender_0 = RC_MAC.RTSSender(7, 250000, 1, 1, 250000, 'RTSNode1.txt')
         self.RC_MAC_PHY_Sender_0 = RC_MAC_PHY_Sender()
 
 
@@ -85,11 +85,11 @@ class RTSSender(gr.top_block):
         # Connections
         ##################################################
         self.msg_connect((self.RC_MAC_RTSSender_0, 'UserDataOut'), (self.RC_MAC_PHY_Sender_0, 'in'))
-        self.msg_connect((self.blocks_message_strobe_0, 'strobe'), (self.RC_MAC_RTSSender_0, 'UserDataIn'))
-        self.msg_connect((self.rc_mac_phy_0, 'out'), (self.RC_MAC_RTSSender_0, 'DecodeMessage'))
+        self.msg_connect((self.blocks_message_strobe_random_0, 'strobe'), (self.RC_MAC_RTSSender_0, 'UserDataIn'))
+        self.msg_connect((self.rc_mac_phy_receiver_0, 'out'), (self.RC_MAC_RTSSender_0, 'DecodeMessage'))
         self.connect((self.RC_MAC_PHY_Sender_0, 0), (self.uhd_usrp_sink_0, 0))
         self.connect((self.uhd_usrp_source_0, 0), (self.RC_MAC_RTSSender_0, 0))
-        self.connect((self.uhd_usrp_source_0, 0), (self.rc_mac_phy_0, 0))
+        self.connect((self.uhd_usrp_source_0, 0), (self.rc_mac_phy_receiver_0, 0))
 
 
     def get_sf(self):

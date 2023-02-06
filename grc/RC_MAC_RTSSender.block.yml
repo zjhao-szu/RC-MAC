@@ -3,7 +3,7 @@ label: RTSSender
 category: '[Rc_mac]'
 templates:
   imports: import RC_MAC
-  make: RC_MAC.RTSSender(${sf}, ${bw}, ${classType}, ${NodeId}, ${sampRate})
+  make: RC_MAC.RTSSender(${sf}, ${bw}, ${classType}, ${NodeId}, ${sampRate}, ${filename})
 parameters:
 - id: sf
   label: Sf
@@ -20,6 +20,9 @@ parameters:
 - id: sampRate
   label: Samprate
   dtype: raw
+- id: filename
+  label: Filename
+  dtype: string
 inputs:
 - label: in
   domain: stream

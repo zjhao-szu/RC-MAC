@@ -104,27 +104,28 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [776, 296.0]
+    coordinate: [784, 352.0]
     rotation: 0
-    state: true
+    state: enabled
 - name: RC_MAC_RTSSender_0
   id: RC_MAC_RTSSender
   parameters:
     NodeId: '1'
     affinity: ''
     alias: ''
-    bw: bw
-    classType: classType
+    bw: '250000'
+    classType: '1'
     comment: ''
+    filename: RTSNode1.txt
     maxoutbuf: '0'
     minoutbuf: '0'
-    sampRate: samp_rate
-    sf: sf
+    sampRate: '250000'
+    sf: '7'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [528, 248.0]
+    coordinate: [544, 308.0]
     rotation: 0
     state: true
 - name: blocks_message_strobe_0
@@ -141,75 +142,34 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [80, 372.0]
+    coordinate: [168, 372.0]
     rotation: 0
-    state: true
-- name: qtgui_waterfall_sink_x_0
-  id: qtgui_waterfall_sink_x
+    state: disabled
+- name: blocks_message_strobe_random_0
+  id: blocks_message_strobe_random
   parameters:
     affinity: ''
     alias: ''
-    alpha1: '1.0'
-    alpha10: '1.0'
-    alpha2: '1.0'
-    alpha3: '1.0'
-    alpha4: '1.0'
-    alpha5: '1.0'
-    alpha6: '1.0'
-    alpha7: '1.0'
-    alpha8: '1.0'
-    alpha9: '1.0'
-    axislabels: 'True'
-    bw: samp_rate
-    color1: '0'
-    color10: '0'
-    color2: '0'
-    color3: '0'
-    color4: '0'
-    color5: '0'
-    color6: '0'
-    color7: '0'
-    color8: '0'
-    color9: '0'
     comment: ''
-    fc: '0'
-    fftsize: '1024'
-    freqhalf: 'True'
-    grid: 'False'
-    gui_hint: ''
-    int_max: '10'
-    int_min: '-140'
-    label1: ''
-    label10: ''
-    label2: ''
-    label3: ''
-    label4: ''
-    label5: ''
-    label6: ''
-    label7: ''
-    label8: ''
-    label9: ''
-    legend: 'True'
+    dist: blocks.STROBE_UNIFORM
     maxoutbuf: '0'
+    mean: '200'
     minoutbuf: '0'
-    name: '""'
-    nconnections: '1'
-    showports: 'False'
-    type: complex
-    update_time: '0.10'
-    wintype: firdes.WIN_BLACKMAN_hARRIS
+    msg: pmt.intern("hello world,my name is node 1!")
+    std: '10'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [968, 144.0]
+    coordinate: [176, 444.0]
     rotation: 0
-    state: disabled
+    state: true
 - name: rc_mac_phy_receiver_0
   id: rc_mac_phy_receiver
   parameters:
     affinity: ''
     alias: ''
+    channelsf: '7'
     comment: ''
     maxoutbuf: '0'
     minoutbuf: '0'
@@ -217,7 +177,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [224, 328.0]
+    coordinate: [408, 244.0]
     rotation: 0
     state: true
 - name: uhd_usrp_sink_0
@@ -331,7 +291,7 @@ blocks:
     clock_source6: ''
     clock_source7: ''
     comment: ''
-    dev_addr: '"serial=3241A01"'
+    dev_addr: '"serial=3241A4A"'
     dev_args: '""'
     gain0: '90'
     gain1: '0'
@@ -494,9 +454,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1104, 164.0]
+    coordinate: [784, 112.0]
     rotation: 0
-    state: true
+    state: enabled
 - name: uhd_usrp_source_0
   id: uhd_usrp_source
   parameters:
@@ -640,7 +600,7 @@ blocks:
     dc_offs_enb7: '""'
     dc_offs_enb8: '""'
     dc_offs_enb9: '""'
-    dev_addr: '"serial=3241A01"'
+    dev_addr: '"serial=3241A4A"'
     dev_args: '""'
     gain0: '60'
     gain1: '0'
@@ -866,15 +826,14 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [24, 172.0]
+    coordinate: [56, 160.0]
     rotation: 0
     state: true
 
 connections:
-- [RC_MAC_PHY_Sender_0, '0', qtgui_waterfall_sink_x_0, '0']
 - [RC_MAC_PHY_Sender_0, '0', uhd_usrp_sink_0, '0']
 - [RC_MAC_RTSSender_0, UserDataOut, RC_MAC_PHY_Sender_0, in]
-- [blocks_message_strobe_0, strobe, RC_MAC_RTSSender_0, UserDataIn]
+- [blocks_message_strobe_random_0, strobe, RC_MAC_RTSSender_0, UserDataIn]
 - [rc_mac_phy_receiver_0, out, RC_MAC_RTSSender_0, DecodeMessage]
 - [uhd_usrp_source_0, '0', RC_MAC_RTSSender_0, '0']
 - [uhd_usrp_source_0, '0', rc_mac_phy_receiver_0, '0']
