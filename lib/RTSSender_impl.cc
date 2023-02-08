@@ -129,6 +129,7 @@ namespace gr {
         out_record_file.open(m_filename, std::ios::out | std::ios::trunc);
         usesendCount = 0;
         m_SendRequest = false;
+        m_needOffset = false;
     }
 
     /*
@@ -163,7 +164,7 @@ namespace gr {
           std::cout<<"当前状态为忙碌状态，缓存需要发送的信息，状态不进行切换!!!"<<std::endl;
           out_record_file<<"当前状态为忙碌状态，缓存需要发送的信息，状态不进行切换!!!"<<m_userDatas.back()<<std::endl;
           usesendCount++;
-          if(usesendCount >= 10){
+          if(usesendCount >= 4){
               m_state = S_RTS_CAD;
               m_cad_count = 8;
               m_cad_detect = false;
@@ -202,6 +203,7 @@ namespace gr {
       //only state is receiving, resolve the message
       if(m_state != S_RTS_WAIT_CTS) return;
       std::string str = pmt::symbol_to_string(msg);
+      m_needOffset = true;
       std::cout<<"receiveDecodeMessage::Parse Message::"<<str<<std::endl;
       out_record_file<<"receiveDecodeMessage::Parse Message::"<<str<<std::endl;
       offsetCount++;
@@ -215,7 +217,7 @@ namespace gr {
                 int nowId = std::stoi(nodeId);
                 if(nowId != m_nodeId && !m_SendRequest){
                   m_state = S_RTS_SLEEP;
-                  m_SleepWindowCount = 100 * rand() % 10 + 30;
+                  m_SleepWindowCount = 1 * rand() % 10 + 30;
                   out_record_file<<"sleep Count   is "<<m_SleepWindowCount<<std::endl;
                 }	
             }
@@ -251,7 +253,7 @@ namespace gr {
             std::cout<<"m_NodeId: "<<m_nodeId<<" 收到CTS数据包,获胜节点为: "<<m_ReceiveNodeId<<std::endl;
             out_record_file<<"m_NodeId: "<<m_nodeId<<" 收到CTS数据包,获胜节点为: "<<m_ReceiveNodeId<<std::endl;
             m_state = S_RTS_SLEEP;
-            m_SleepWindowCount = 100;
+            m_SleepWindowCount = 5;
             gettimeofday(&m_endReceiveTime,NULL);
             m_receiveTime += getTimeval(m_startReceiveTime,m_endReceiveTime);
             m_paraState = 3;
@@ -296,7 +298,7 @@ namespace gr {
         m_receiveTime += getTimeval(m_startReceiveTime,m_endReceiveTime);
       }else{
         m_state = S_RTS_SLEEP;
-        m_SleepWindowCount = 100;
+        m_SleepWindowCount = 5;
         gettimeofday(&m_endReceiveTime,NULL);
         m_receiveTime += getTimeval(m_startReceiveTime,m_endReceiveTime);
         // if(m_state == S_RTS_RECEIVE2){
@@ -491,7 +493,11 @@ namespace gr {
       unsigned int num_consumed = m_samples_per_symbol;
       uint32_t maxIndex = 0;
       float maxValue = 0;
-	
+      if(m_needOffset)
+      {
+        num_consumed = m_samples_per_symbol * 100;
+        m_needOffset = false;
+      }
       // if(m_classType == M_RTS_CLASSB && m_beacon_Interval_Window > 0 ){
       //   m_beacon_Interval_Window--;
       //   if(m_beacon_Interval_Window == 0){
@@ -516,7 +522,7 @@ namespace gr {
           // m_receive1_window_count = 1000;
           // m_receive2_window_count = 1000;
           // m_slotReceive_window_count = 1000;
-          m_SleepWindowCount = 100;
+          m_SleepWindowCount = 5;
           m_state = S_RTS_RECEIVE_DATA;
           m_sendDataState = false;
           offsetUse = false;
@@ -579,7 +585,7 @@ namespace gr {
             //SLEEP 会等待二进制退避算法结束休眠
             //reset 则会重置缓冲区的数据，但是我们还没发送数据，所以这里状态不能切换至reset状态
             m_state = S_RTS_SLEEP;
-            m_SleepWindowCount = 100;
+            m_SleepWindowCount = 5;
             gettimeofday(&m_endDIFSTime,NULL);
             m_DIFSTime = getTimeval(m_startDIFSTime,m_endDIFSTime);
             m_paraState = 1;

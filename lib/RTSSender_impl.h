@@ -154,6 +154,8 @@ namespace gr {
 
       std::ofstream out_record_file;
       std::string m_filename;
+      bool m_needOffset;
+
      public:
       RTSSender_impl(uint32_t sf,uint32_t bw,int classType,uint32_t NodeId,uint32_t sampRate,std::string filename);
       ~RTSSender_impl();
