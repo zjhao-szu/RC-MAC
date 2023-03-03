@@ -173,7 +173,7 @@ blocks:
     bus_structure: null
     coordinate: [640, 388.0]
     rotation: 0
-    state: enabled
+    state: disabled
 - name: lora_sdr_SendRecordParam_0
   id: lora_sdr_SendRecordParam
   parameters:
@@ -212,7 +212,7 @@ blocks:
     comment: ''
     maxoutbuf: '0'
     minoutbuf: '0'
-    sf: sf
+    sf: nodesf
   states:
     bus_sink: false
     bus_source: false
@@ -226,10 +226,10 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    cr: cr
+    cr: nodecr
     maxoutbuf: '0'
     minoutbuf: '0'
-    sf: sf
+    sf: nodesf
   states:
     bus_sink: false
     bus_source: false
@@ -243,7 +243,7 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    cr: cr
+    cr: nodecr
     has_crc: has_crc
     impl_head: impl_head
     maxoutbuf: '0'
@@ -252,7 +252,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [440, 220.0]
+    coordinate: [488, 244.0]
     rotation: 0
     state: enabled
 - name: lora_sdr_interleaver_0
@@ -261,10 +261,10 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    cr: cr
+    cr: nodecr
     maxoutbuf: '0'
     minoutbuf: '0'
-    sf: sf
+    sf: nodesf
   states:
     bus_sink: false
     bus_source: false
@@ -300,12 +300,12 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    bw: bw
+    bw: nodebw
     comment: ''
     maxoutbuf: '0'
     minoutbuf: '10000000'
     samp_rate: samp_rate
-    sf: sf
+    sf: nodesf
     sync_words: '[8,16]'
   states:
     bus_sink: false
@@ -329,6 +329,74 @@ blocks:
     coordinate: [320, 296.0]
     rotation: 0
     state: enabled
+- name: nodeSampRate
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: nodeSampRate
+    short_id: ''
+    type: ''
+    value: '250000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [784, 84.0]
+    rotation: 0
+    state: true
+- name: nodebw
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: nodebw
+    short_id: ''
+    type: ''
+    value: '250000'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [656, 108.0]
+    rotation: 0
+    state: true
+- name: nodecr
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: nodecr
+    short_id: ''
+    type: ''
+    value: '3'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [432, 108.0]
+    rotation: 0
+    state: true
+- name: nodesf
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: nodesf
+    short_id: ''
+    type: ''
+    value: '7'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [544, 108.0]
+    rotation: 0
+    state: true
 - name: pad_sink_0
   id: pad_sink
   parameters:
@@ -364,7 +432,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [152, 220.0]
+    coordinate: [136, 320.0]
     rotation: 0
     state: true
 

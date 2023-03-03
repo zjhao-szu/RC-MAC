@@ -143,7 +143,7 @@ namespace gr {
     RTSSender_impl::forecast (int noutput_items, gr_vector_int &ninput_items_required)
     {
       /* <+forecast+> e.g. ninput_items_required[0] = noutput_items */
-	    ninput_items_required[0] = noutput_items * m_samples_per_symbol;
+	    ninput_items_required[0] = 100 * m_samples_per_symbol;
     }
     // /********************************************************************
     //  * 接收用户需要发送的数据包
@@ -165,7 +165,9 @@ namespace gr {
           out_record_file<<"当前状态为忙碌状态，缓存需要发送的信息，状态不进行切换!!!"<<m_userDatas.back()<<std::endl;
           usesendCount++;
           if(usesendCount >= 4){
-              m_state = S_RTS_CAD;
+              m_state = S_RTS_RESET;
+              std::cout<<"change to RESET State!!!!"<<std::endl;
+              out_record_file<<"change to RESET State!!!!"<<std::endl;
               m_cad_count = 8;
               m_cad_detect = false;
               usesendCount = 0;
@@ -217,7 +219,7 @@ namespace gr {
                 int nowId = std::stoi(nodeId);
                 if(nowId != m_nodeId && !m_SendRequest){
                   m_state = S_RTS_SLEEP;
-                  m_SleepWindowCount = 1 * rand() % 10 + 30;
+                  m_SleepWindowCount = 5;
                   out_record_file<<"sleep Count   is "<<m_SleepWindowCount<<std::endl;
                 }	
             }
@@ -389,7 +391,7 @@ namespace gr {
       //这里是每一条消息都有一个数据包发送，其实也可以合并所有的数据包一起发送
       //两种方案后续都可以考虑
       std::string msgData = "";
-      int indexSize = 3;
+      int indexSize = 1;
       if(m_userDatas.size() > indexSize){
         for(int i = 0;i < indexSize;i++){
           msgData.append(m_userDatas.back());
@@ -498,6 +500,7 @@ namespace gr {
         num_consumed = m_samples_per_symbol * 100;
         m_needOffset = false;
       }
+      // std::cout<<"Test"<<std::endl;
       // if(m_classType == M_RTS_CLASSB && m_beacon_Interval_Window > 0 ){
       //   m_beacon_Interval_Window--;
       //   if(m_beacon_Interval_Window == 0){

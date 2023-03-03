@@ -41,7 +41,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [304, 28.0]
+    coordinate: [304, 8.0]
     rotation: 0
     state: enabled
 - name: center_freq
@@ -146,9 +146,9 @@ blocks:
     alias: ''
     comment: ''
     hide: none
-    label: sf
+    label: channelsf
     short_id: ''
-    type: intx
+    type: ''
     value: '7'
   states:
     bus_sink: false
@@ -165,7 +165,7 @@ blocks:
     comment: ''
     interp: '4'
     maxoutbuf: '0'
-    minoutbuf: '0'
+    minoutbuf: '20000'
     samp_delay: '0'
     taps: (-0.128616616593872,    -0.212206590789194,    -0.180063263231421,    3.89817183251938e-17    ,0.300105438719035    ,0.636619772367581    ,0.900316316157106,    1    ,0.900316316157106,    0.636619772367581,    0.300105438719035,    3.89817183251938e-17,    -0.180063263231421,    -0.212206590789194,    -0.128616616593872)
     type: ccf
@@ -246,7 +246,7 @@ blocks:
   parameters:
     affinity: ''
     alias: ''
-    bandwidth: bw
+    bandwidth: nodebw
     comment: ''
     impl_head: impl_head
     maxoutbuf: '0'
@@ -297,7 +297,7 @@ blocks:
     affinity: ''
     alias: ''
     comment: ''
-    cr: cr
+    cr: nodecr
     has_crc: has_crc
     impl_head: impl_head
     maxoutbuf: '0'
@@ -310,37 +310,57 @@ blocks:
     coordinate: [904, 500.0]
     rotation: 180
     state: true
-- name: lora_sdr_readParam_0
-  id: lora_sdr_readParam
+- name: nodeSampRate
+  id: parameter
   parameters:
-    affinity: ''
     alias: ''
-    bw: bw
     comment: ''
-    maxoutbuf: '0'
-    minoutbuf: '0'
-    samp_rate: samp_rate
-    sf: channelsf
+    hide: none
+    label: nodeSampRate
+    short_id: ''
+    type: ''
+    value: '250000'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [528, 228.0]
+    coordinate: [56, 140.0]
     rotation: 0
-    state: enabled
-- name: lora_sdr_recordParams_0
-  id: lora_sdr_recordParams
+    state: true
+- name: nodebw
+  id: parameter
   parameters:
-    affinity: ''
     alias: ''
     comment: ''
+    hide: none
+    label: nodebw
+    short_id: ''
+    type: ''
+    value: '250000'
   states:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [152, 384.0]
-    rotation: 180
-    state: enabled
+    coordinate: [352, 276.0]
+    rotation: 0
+    state: true
+- name: nodecr
+  id: parameter
+  parameters:
+    alias: ''
+    comment: ''
+    hide: none
+    label: nodecr
+    short_id: ''
+    type: ''
+    value: '3'
+  states:
+    bus_sink: false
+    bus_source: false
+    bus_structure: null
+    coordinate: [368, 84.0]
+    rotation: 0
+    state: true
 - name: pad_sink_0
   id: pad_sink
   parameters:
@@ -381,8 +401,7 @@ blocks:
     state: true
 
 connections:
-- [interp_fir_filter_xxx_0, '0', lora_sdr_readParam_0, '0']
-- [lora_sdr_crc_verif_0, msg, lora_sdr_recordParams_0, msgIn]
+- [interp_fir_filter_xxx_0, '0', lora_sdr_frame_sync_0, '0']
 - [lora_sdr_crc_verif_0, msg, pad_sink_0, in]
 - [lora_sdr_deinterleaver_0, '0', lora_sdr_hamming_dec_0, '0']
 - [lora_sdr_dewhitening_0, '0', lora_sdr_crc_verif_0, '0']
@@ -392,8 +411,6 @@ connections:
 - [lora_sdr_hamming_dec_0, '0', lora_sdr_header_decoder_0, '0']
 - [lora_sdr_header_decoder_0, '0', lora_sdr_dewhitening_0, '0']
 - [lora_sdr_header_decoder_0, frame_info, lora_sdr_frame_sync_0, frame_info]
-- [lora_sdr_readParam_0, '0', lora_sdr_frame_sync_0, '0']
-- [lora_sdr_readParam_0, SNROut, lora_sdr_recordParams_0, SNRIN]
 - [pad_source_0, '0', interp_fir_filter_xxx_0, '0']
 
 metadata:
